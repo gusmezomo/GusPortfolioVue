@@ -63,3 +63,98 @@
     </div>
   </section>
 </template>
+
+<style scoped>
+/* tela principal do site */
+.hero {
+  min-height: 100vh; /* altura minima, por causa do cabecalho */
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  padding: 4rem 2rem;
+}
+
+.hero-content {
+  display: grid; /* usa grid para organizar o conteudo */
+  grid-template-columns: 1fr auto 1fr; /* 3 colunas: texto, avatar, acoes */
+  gap: 3rem;
+  align-items: center;
+}
+
+/* texto principal (meu nome) */
+.hero-text h1 {
+  font-size: 3.6rem;
+  margin: 0.5rem 0;
+}
+
+/* texto secundario (estudante) */
+.hero-text h2 {
+  font-size: 1.5rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+}
+
+/* foto */
+.hero-foto img {
+  width: 420px;
+  height: 420px;
+  object-fit: cover; /* preenche o espaco sem distorcer */
+  border-radius: 50%; /* deixa em circulo */
+  border: 6px solid var(--accent);
+  box-shadow: 0 0 25px var(--border-shadow);
+}
+
+/* "Seja Bem vindo!" */
+.badge {
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1.4rem; /* espaçamento interno */
+  font-size: 1.1rem;
+  font-weight: bold; /* texto em negrito */
+  border-radius: 999px; /* bordas arredondadas */
+  margin-bottom: 1rem;
+  box-shadow: 0 0 12px var(--border-shadow); /* sombra suave */
+}
+
+/* icones de redes sociais */
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* aparencia dos icones */
+.social-icons a {
+  text-decoration: none; /* remove o sublinhado */
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+/* efeito quando o mouse passa por cima */
+.social-icons a:hover {
+  color: var(--accent);
+}
+
+/* icones de contato */
+.contato-icons {
+  display: flex;
+  flex-direction: column; /* botoes emcima do outro*/
+  gap: 1rem;
+  align-items: flex-end; /* alinha os botoes a direita */
+}
+
+/* aparencia dos botoes*/
+.contato-btn {
+  text-decoration: none; /* remove o sublinhado */
+  padding: 0.6rem 1.2rem; /* espaçamento interno */
+  border-radius: 30px; /* bordas arredondadas */
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-align: center;
+}
+
+/* efeito quando o mouse passa por cima */
+.contato-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+</style>

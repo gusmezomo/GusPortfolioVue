@@ -34,3 +34,61 @@
     </div>
   </section>
 </template>
+
+<style scoped>
+/* Sobre Mim */
+  .sobre {
+  padding: 10rem 2rem 10rem; /* espaçamento de cima e embaixo do fundo */
+  background-color: var(--bg2);
+  color: var(--text);
+}
+
+.sobre-titulo {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 5rem;
+  font-weight: bold;
+}
+
+.sobre-pagina {
+  display: flex;
+  gap: 4rem;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center; /* alinha verticalmente */
+  max-width: 1200px; /* largura maxima para manter o conteudo */
+  margin: 0 auto; /* centraliza o container */
+}
+
+.sobre-img img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover; /* preenche o espaco sem distorcer */
+  border-radius: 20px; /* bordas arredondadas */
+  border: 4px solid var(--accent); /* borda colorida */
+  box-shadow: 0 0 30px var(--border-shadow); /* sombra */
+}
+
+.sobre-info {
+  min-width: 280px; /* tamanho minimo do texto */
+  font-size: 1.15rem;
+  line-height: 1.8; /* espaçamento entre linhas */
+}
+
+/* titulo */
+.sobre-info h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* paragrafo */
+.sobre-info p {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+  text-align: justify;
+}
+
+.sobre-info i {
+  color: var(--accent); /* ou qualquer cor que combine com seu tema */
+}
+</style>

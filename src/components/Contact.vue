@@ -145,3 +145,177 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/* Contato */
+.contato {
+  padding: 4rem 2rem;
+  background-color: var(--bg2);
+  color: var(--text);
+}
+
+.contato-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contato-titulo {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.contato-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contato-info h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.contato-info p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.contato-detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.contato-icon {
+  font-size: 1.2rem;
+}
+
+.contato-icon i {
+  font-size: 1.2rem;
+  color: var(--accent); /* ou a cor que combine com seu tema */
+  width: 25px;
+  text-align: center;
+}
+
+.contato-form {
+  background-color: var(--bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: var(--bg2);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--border-shadow);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #888;
+}
+
+.contato-btn-enviar {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.contato-btn-enviar:hover:not(:disabled) {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--border-shadow);
+}
+
+.contato-btn-enviar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mensagem-sucesso {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mensagem-erro {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f44336;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Responsividade para o formulário de contato */
+@media (max-width: 900px) {
+  .contato-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contato-titulo {
+    font-size: 2.4rem;
+  }
+
+  .contato-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .contato-info p {
+    font-size: 1rem;
+  }
+}
+</style>

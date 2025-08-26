@@ -48,3 +48,73 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/* Projetos */
+.projetos {
+  padding: 4rem 2rem;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* titulo da pagina */
+.projetos h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.grid-projetos {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem; /* espaço lado a lado */
+  row-gap: 1.5rem;    /* espaço de cima pra baixo */
+  justify-items: center; /* centraliza os itens dentro de cada bloco */ /* largura máxima */
+  margin: 0 auto;
+}
+
+
+.card-projeto {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 12px; /* bordas arredondadas */
+  padding: 2rem; /* espaçamento interno */
+  text-align: center; 
+  width: 100%; /* ocupa todo o grid */  /* largura máxima */
+}
+
+/* efeito ao passar o mouse */
+.card-projeto:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 30px var(--border-shadow); /* sombra ao passar o mouse */
+}
+
+/* titulo do projeto */
+.card-projeto h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+/* descricao do projeto */
+.card-projeto p {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+/* imagem */
+.card-projeto img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; /* preenche o espaco sem distorcer */
+  border-radius: 8px;
+}
+
+.projeto-overlay {
+visibility: hidden;
+}
+</style>
