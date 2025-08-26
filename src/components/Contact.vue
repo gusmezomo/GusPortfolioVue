@@ -1,0 +1,147 @@
+<template>
+  <section
+    id="contato"
+    class="contato"
+    v-motion
+    :initial="{ opacity: 0, y: 50 }"
+    :enter="{ opacity: 1, y: 0 }"
+    :duration="800"
+  >
+    <div class="contato-container">
+      <h2 class="contato-titulo">Entre em Contato</h2>
+      <div class="contato-content">
+        <div 
+          class="contato-info"
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :enter="{ opacity: 1, y: 0 }"
+          :duration="700"
+        >
+          <h3>Vamos Conversar!</h3>
+          <p>
+            Estou sempre aberto a novas oportunidades e colaborações. 
+            Se você tem um projeto em mente ou quer apenas bater um papo, 
+            não hesite em me enviar uma mensagem!
+          </p>
+          <div class="contato-detalhes">
+            <div class="contato-item">
+              <span class="contato-icon"><i class="fas fa-envelope"></i></span>
+              <span>Email: gusmezomo@gmail.com</span>
+            </div>
+            <div class="contato-item">
+              <span class="contato-icon"><i class="fas fa-map-marker-alt"></i></span>
+              <span>Localização: Porto Alegre, RS</span>
+            </div>
+            <div class="contato-item">
+              <span class="contato-icon"><i class="fas fa-briefcase"></i></span>
+              <span>Disponível para projetos freelance</span>
+            </div>
+          </div>
+        </div>
+        <form
+          class="contato-form"
+          @submit="onSubmit"
+          autocomplete="off"
+          v-motion
+          :initial="{ opacity: 0, y: 30 }"
+          :enter="{ opacity: 1, y: 0 }"
+          :duration="700"
+        >
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Seu nome completo"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="seu-email@exemplo.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Conte-me sobre seu projeto ou ideia..."
+              rows="6"
+            ></textarea>
+          </div>
+          <button 
+            type="submit" 
+            class="contato-btn-enviar"
+            :disabled="isSubmitting"
+          >
+            {{ isSubmitting ? 'Enviando...' : 'Enviar Mensagem' }}
+          </button>
+          <div v-if="submitStatus === 'success'" class="mensagem-sucesso">
+            Mensagem enviada com sucesso! Entrarei em contato em breve.
+          </div>
+          <div v-if="submitStatus === 'error'" class="mensagem-erro">
+            {{ errorMessage || 'Erro ao enviar mensagem. Tente novamente.' }}
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      isSubmitting: false,
+      submitStatus: '',
+      errorMessage: ''
+    }
+  },
+  methods: {
+    async onSubmit(event) {
+      event.preventDefault();
+      this.isSubmitting = true;
+      this.submitStatus = '';
+      this.errorMessage = '';
+
+      const formData = new FormData(event.target);
+      formData.append('access_key', '8d321f3e-16f0-4aed-83b5-95fc70ee70fe');
+
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: json,
+        });
+        const res = await response.json();
+        if (res.success) {
+          this.submitStatus = 'success';
+          event.target.reset();
+        } else {
+          this.submitStatus = 'error';
+          this.errorMessage = res.message || 'Erro ao enviar mensagem.';
+        }
+      } catch (error) {
+        this.submitStatus = 'error';
+        this.errorMessage = 'Erro de conexão. Tente novamente.';
+      } finally {
+        this.isSubmitting = false;
+      }
+    }
+  }
+}
+</script>
