@@ -146,4 +146,61 @@ export default {
 
 /* Overlay mantido escondido */
 .projeto-overlay { visibility: hidden; }
+
+@media (max-width: 900px) {
+  /* Projetos */
+  .projetos {
+    padding: 3rem 1rem;
+  }
+
+  .grid-projetos {
+    grid-template-columns: 1fr; /* uma coluna */
+    gap: 1rem;
+  }
+
+  /* tamanho das imagens */
+  .card-projeto img {
+    height: 200px;
+  }
+
+  /* tamanho do titulo */
+  .projetos h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .card-projeto {
+    padding: 1.5rem;
+  }
+
+}
+
+/* Configurações para telas muito pequenas */
+@media (max-width: 480px) {
+  .projetos {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  .projetos h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-projeto {
+    padding: 1rem;
+  }
+
+  .card-projeto img {
+    height: 180px;
+  }
+
+  .card-projeto h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-projeto p {
+    font-size: 0.9rem;
+  }
+}
 </style>

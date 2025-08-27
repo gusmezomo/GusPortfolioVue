@@ -157,4 +157,45 @@
   background: var(--accent);
   color: white;
 }
+
+@media (max-width: 900px) {
+  
+  /* espaçamento do cabecalho */
+  .hero {
+    padding-top: 120px; 
+  }
+
+  /* pagina principal */
+  .hero-content {
+    grid-template-columns: 1fr; /* uma coluna */
+    text-align: center; 
+    gap: 1.5rem;
+  }
+
+  /* tamanho da imagem */
+  .hero-foto img {
+    width: 280px;
+    height: 280px;
+  }
+
+  /* tamanho dos textos */
+  .hero-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.3rem;
+  }
+
+  /* centraliza os botoes de contato */
+  .contato-icons {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-icons {
+    align-items: center;
+    justify-content: center;
+  }
+}
 </style>

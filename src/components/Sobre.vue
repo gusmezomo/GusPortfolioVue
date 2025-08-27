@@ -91,4 +91,30 @@
 .sobre-info i {
   color: var(--accent); /* ou qualquer cor que combine com seu tema */
 }
+
+@media (max-width: 900px) {
+
+  /* Sobre */
+  .sobre-pagina {
+    flex-direction: column; /* uma coluna */
+    gap: 2rem;
+    text-align: center;
+  }
+
+  /* tamanho da imagem */
+  .sobre-img img {
+    width: 280px;
+    height: 280px;
+  }
+
+  /* tamanho do texto "Sobre Mim" */
+  .sobre-titulo {
+    font-size: 2.2rem;
+  }
+
+  /* tamanho do texto do nome */
+  .sobre-info h3 {
+    font-size: 1.8rem;
+  }
+}
 </style>
