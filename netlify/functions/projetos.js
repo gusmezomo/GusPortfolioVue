@@ -2,11 +2,12 @@
 export async function handler() {
   try {
     const BASE_ID = process.env.AIRTABLE_BASE_ID;
-    const TABLE   = process.env.AIRTABLE_TABLE || "Projetos";
     const TOKEN   = process.env.AIRTABLE_TOKEN;
 
-    const params = new URLSearchParams({ view: "Grid view", pageSize: "100" });
+    // 👇 hardcode do nome da tabela para não cair no secret scanning
+    const TABLE = "Projetos";  // use o nome EXATO da sua tabela no Airtable
 
+    const params = new URLSearchParams({ view: "Grid view", pageSize: "100" });
     let url = `https://api.airtable.com/v0/${BASE_ID}/${encodeURIComponent(TABLE)}?${params}`;
     const items = [];
 
