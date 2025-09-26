@@ -4,8 +4,9 @@
     class="sobre"
     v-motion
     :initial="{ opacity: 0, y: 50 }"
-    :enter="{ opacity: 1, y: 0 }"
+    :visible="{ opacity: 1, y: 0 }"
     :duration="800"
+    :delay="300"
   >
     <h2 class="sobre-titulo">Sobre mim</h2>
     <div class="sobre-pagina">
@@ -13,8 +14,9 @@
         class="sobre-img"
         v-motion
         :initial="{ opacity: 0, x: -50 }"
-        :enter="{ opacity: 1, x: 0 }"
+        :visible="{ opacity: 1, x: 0 }"
         :duration="800"
+        :delay="600"
       >
         <img src="/img/perfil2.jpg" alt="Foto2" />
       </div>
@@ -23,8 +25,9 @@
         class="sobre-info"
         v-motion
         :initial="{ opacity: 0, x: 50 }"
-        :enter="{ opacity: 1, x: 0 }"
+        :visible="{ opacity: 1, x: 0 }"
         :duration="800"
+        :delay="900"
       >
         <h3>Gustavo Dalla Porta Mezomo</h3>
         <p><i class="fas fa-laptop-code"></i> Estudante de Ciência da Computação na Unisinos, apaixonado por programação.</p>

@@ -1,11 +1,23 @@
 <template>
-  <section class="projetos" id="projetos">
+  <section class="projetos" id="projetos"
+    v-motion
+        :initial="{ opacity: 0, x: 50 }"
+        :visible="{ opacity: 1, x: 0 }"
+        :delay="0"
+        :duration="800"
+  >
     <h2>Meus Projetos</h2>
 
     <div v-if="loading" class="estado">Carregando…</div>
     <div v-else-if="erro" class="estado erro">Erro: {{ erro }}</div>
 
-    <div v-else class="grid-projetos">
+    <div v-else class="grid-projetos"
+      v-motion
+        :initial="{ opacity: 0, x: 50 }"
+        :visible="{ opacity: 1, x: 0 }"
+        :delay="0"
+        :duration="800"
+    >
       <article v-for="p in projetos" :key="p.titulo" class="card-projeto">
         <img v-if="p.imagem" :src="p.imagem" :alt="p.titulo" loading="lazy" />
         <h3>{{ p.titulo }}</h3>

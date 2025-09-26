@@ -4,8 +4,9 @@
     class="contato"
     v-motion
     :initial="{ opacity: 0, y: 50 }"
-    :enter="{ opacity: 1, y: 0 }"
+    :visible="{ opacity: 1, y: 0 }"
     :duration="800"
+    :delay="0"
   >
     <div class="contato-container">
       <h2 class="contato-titulo">Entre em Contato</h2>
@@ -13,9 +14,10 @@
         <div 
           class="contato-info"
           v-motion
-          :initial="{ opacity: 0, y: 30 }"
-          :enter="{ opacity: 1, y: 0 }"
-          :duration="700"
+          :initial="{ opacity: 0, y: 50 }"
+          :visible="{ opacity: 1, y: 0 }"
+          :duration="800"
+          :delay="0"
         >
           <h3>Vamos Conversar!</h3>
           <p>
@@ -43,9 +45,10 @@
           @submit="onSubmit"
           autocomplete="off"
           v-motion
-          :initial="{ opacity: 0, y: 30 }"
-          :enter="{ opacity: 1, y: 0 }"
-          :duration="700"
+          :initial="{ opacity: 0, y: 50 }"
+          :visible="{ opacity: 1, y: 0 }"
+          :duration="800"
+          :delay="0"
         >
           <div class="form-group">
             <label for="name">Nome</label>

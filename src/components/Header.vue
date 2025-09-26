@@ -48,6 +48,18 @@ nav a {
 nav a:hover {
   color: var(--accent);
 }
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1rem; /* reduz o espaçamento entre os itens */
+    padding: 0 1rem; /* adiciona padding nas laterais */
+  }
+
+  header {
+    padding: 1rem 0; /* reduz o padding do header */
+  }
+}
 </style>
 
 

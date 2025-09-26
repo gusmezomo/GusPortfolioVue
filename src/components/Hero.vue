@@ -4,8 +4,9 @@
     class="hero"
     v-motion
     :initial="{ opacity: 0, y: -50 }"
-    :enter="{ opacity: 1, y: 0 }"
+    :visible="{ opacity: 1, y: 0 }"
     :duration="700"
+    :delay="0"
   >
     <div class="hero-content">
       <div class="hero-text">
@@ -30,7 +31,7 @@
         class="hero-foto"
         v-motion
         :initial="{ opacity: 0, scale: 0.8 }"
-        :enter="{ opacity: 1, scale: 1 }"
+        :visible="{ opacity: 1, scale: 1 }"
         :delay="400"
         :duration="700"
       >
@@ -41,7 +42,7 @@
         class="contato-icons"
         v-motion
         :initial="{ opacity: 0, x: 50 }"
-        :enter="{ opacity: 1, x: 0 }"
+        :visible="{ opacity: 1, x: 0 }"
         :delay="700"
         :duration="600"
       >
@@ -180,7 +181,8 @@
 
   /* tamanho dos textos */
   .hero-text h1 {
-    font-size: 2.6rem;
+    margin-top: 1.5rem;
+    font-size: 2.4rem;
   }
 
   .hero-text h2 {
