@@ -18,7 +18,7 @@
         :duration="800"
         :delay="600"
       >
-        <img src="/img/perfil2.jpg" alt="Foto2" />
+        <img src="/img/sobre-img.webp" alt="Foto2" />
       </div>
 
       <div

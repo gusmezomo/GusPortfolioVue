@@ -35,7 +35,7 @@
         :delay="400"
         :duration="700"
       >
-        <img src="/img/perfil.jpg" alt="Foto" />
+        <img src="/img/hero-img.webp" alt="Foto" />
       </div>
 
       <div
@@ -47,18 +47,18 @@
         :duration="600"
       >
         <a
+          href="/Gustavo_Mezomo_Curriculo.pdf"
+          target="_blank"
+          class="contato-btn"
+        >
+          <i class="fa-solid fa-file-lines"></i> Curriculo CV
+        </a>
+        <a
           href="https://wa.me/5555996237814?text=Olá%2C%20vim%20pelo%20portfólio!"
           target="_blank"
           class="contato-btn"
-        >
+        > 
           <i class="fab fa-whatsapp"></i> Entre em contato
-        </a>
-        <a
-          href="https://discord.gg/rDDfMq8pme"
-          target="_blank"
-          class="contato-btn"
-        >
-          <i class="fa-brands fa-discord"></i> Servidor no Discord
         </a>
       </div>
     </div>
