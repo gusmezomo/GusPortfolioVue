@@ -36,7 +36,7 @@
             </div>
             <div class="contato-item">
               <span class="contato-icon"><i class="fas fa-briefcase"></i></span>
-              <span>Disponível para projetos freelance</span>
+              <span>Disponível para estágios e oportunidades de trabalho</span>
             </div>
           </div>
         </div>
