@@ -77,7 +77,7 @@
               name="message"
               required
               placeholder="Conte-me sobre seu projeto ou ideia..."
-              rows="6"
+              rows="4"
             ></textarea>
           </div>
           <button 
@@ -152,7 +152,9 @@ export default {
 <style scoped>
 /* Contato */
 .contato {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem 3rem;
+  scroll-margin-top: 80px;
+  overflow-x: hidden;
   background-color: var(--bg2);
   color: var(--text);
 }
@@ -165,14 +167,14 @@ export default {
 .contato-titulo {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
 }
 
 .contato-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2.5rem;
   align-items: start;
 }
 
@@ -185,7 +187,7 @@ export default {
 .contato-info p {
   font-size: 1.1rem;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #ddd;
 }
 
@@ -216,13 +218,13 @@ export default {
 
 .contato-form {
   background-color: var(--bg);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
   border: 1px solid #333;
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .form-group label {
@@ -310,7 +312,7 @@ export default {
   }
 
   .contato-titulo {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .contato-info h3 {

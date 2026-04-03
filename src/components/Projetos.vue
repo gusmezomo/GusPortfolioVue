@@ -8,10 +8,7 @@
   >
     <h2>Meus Projetos</h2>
 
-    <div v-if="loading" class="estado">Carregando…</div>
-    <div v-else-if="erro" class="estado erro">Erro: {{ erro }}</div>
-
-    <div v-else class="grid-projetos"
+    <div class="grid-projetos"
       v-motion
         :initial="{ opacity: 0, x: 50 }"
         :visible="{ opacity: 1, x: 0 }"
@@ -32,19 +29,16 @@
 export default {
   name: "Projetos",
   data() {
-    return { projetos: [], loading: true, erro: null };
-  },
-  async mounted() {
-    try {
-      const res = await fetch("/.netlify/functions/projetos", { headers: { "Cache-Control": "no-cache" } });
-      if (!res.ok) throw new Error("Erro ao carregar projetos");
-      const { items } = await res.json();
-      this.projetos = items;
-    } catch (e) {
-      this.erro = e.message || String(e);
-    } finally {
-      this.loading = false;
-    }
+    return {
+      projetos: [
+        {
+          titulo: "Hamann Baptista Advocacia",
+          descricao: "Site desenvolvido para um escritório de advocacia.",
+          imagem: "/img/project-hamann.webp",
+          link: "https://hamannbaptista.com/",
+        },
+      ],
+    };
   },
 };
 </script>
@@ -53,56 +47,40 @@ export default {
 <style scoped>
 /* --------- Layout da seção --------- */
 .projetos {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem 3rem;
+  scroll-margin-top: 80px;
   background-color: var(--bg);
   color: var(--text);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 .projetos h2 {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 /* --------- Grid responsivo --------- */
 .grid-projetos {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;              /* espaço entre cards (linha e coluna) */
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;        /* largura máxima do conteúdo */
-}
-
-/* 2 colunas em tablets */
-@media (min-width: 700px) {
-  .grid-projetos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-}
-
-/* 3 colunas em desktop */
-@media (min-width: 1024px) {
-  .grid-projetos {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
+  max-width: 1200px;
 }
 
 /* --------- Card --------- */
 .card-projeto {
-  background-color: #1f1f1f;         /* fundo escuro como no estilo antigo */
+  flex: 0 1 340px;
+  background-color: #1f1f1f;
   border: 1px solid #333;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.25rem;
   text-align: center;
-  width: 100%;
   transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
 }
 
@@ -115,7 +93,7 @@ export default {
 /* Imagem de capa */
 .card-projeto img {
   width: 100%;
-  height: 220px;            /* ajuste mais equilibrado para grid */
+  height: 160px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -152,12 +130,6 @@ export default {
   color: #0f0f0f;           /* contraste quando o botão fica colorido */
 }
 
-/* Estados */
-.estado { margin: 1rem auto 0; opacity: .85; }
-.estado.erro { color: #ff6b6b; }
-
-/* Overlay mantido escondido */
-.projeto-overlay { visibility: hidden; }
 
 @media (max-width: 900px) {
   /* Projetos */
@@ -166,7 +138,6 @@ export default {
   }
 
   .grid-projetos {
-    grid-template-columns: 1fr; /* uma coluna */
     gap: 1rem;
   }
 

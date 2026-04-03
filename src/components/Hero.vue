@@ -71,7 +71,8 @@
   min-height: 100vh; /* altura minima, por causa do cabecalho */
   display: flex;
   justify-content: center; /* centraliza horizontalmente */
-  padding: 4rem 2rem;
+  padding: 5rem 2rem 4rem;
+  overflow-x: hidden;
 }
 
 .hero-content {

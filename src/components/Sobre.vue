@@ -40,16 +40,18 @@
 
 <style scoped>
 /* Sobre Mim */
-  .sobre {
-  padding: 10rem 2rem 10rem; /* espaçamento de cima e embaixo do fundo */
+.sobre {
+  padding: 5rem 2rem 4rem;
+  scroll-margin-top: 80px;
+  overflow-x: hidden;
   background-color: var(--bg2);
   color: var(--text);
 }
 
 .sobre-titulo {
   text-align: center;
-  font-size: 2.6rem;
-  margin-bottom: 5rem;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
   font-weight: bold;
 }
 
@@ -63,8 +65,8 @@
 }
 
 .sobre-img img {
-  width: 400px;
-  height: 400px;
+  width: 320px;
+  height: 320px;
   object-fit: cover; /* preenche o espaco sem distorcer */
   border-radius: 20px; /* bordas arredondadas */
   border: 4px solid var(--accent); /* borda colorida */
