@@ -154,7 +154,6 @@ export default {
 .contato {
   padding: 5rem 2rem 3rem;
   scroll-margin-top: 80px;
-  overflow-x: hidden;
   background-color: var(--bg2);
   color: var(--text);
 }

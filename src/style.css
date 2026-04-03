@@ -20,5 +20,5 @@ body {
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  overflow-x: clip;
+  overflow-x: hidden;
 }

@@ -43,7 +43,6 @@
 .sobre {
   padding: 5rem 2rem 4rem;
   scroll-margin-top: 80px;
-  overflow-x: hidden;
   background-color: var(--bg2);
   color: var(--text);
 }

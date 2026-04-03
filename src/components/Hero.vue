@@ -72,7 +72,6 @@
   display: flex;
   justify-content: center; /* centraliza horizontalmente */
   padding: 5rem 2rem 4rem;
-  overflow-x: hidden;
 }
 
 .hero-content {
