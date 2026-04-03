@@ -36,7 +36,7 @@
             </div>
             <div class="contato-item">
               <span class="contato-icon"><i class="fas fa-briefcase"></i></span>
-              <span>Disponível para estágios e oportunidades de trabalho</span>
+              <span>Disponível para estágios<br class="mobile-br">e oportunidades de trabalho</span>
             </div>
           </div>
         </div>
@@ -166,7 +166,8 @@ export default {
 .contato-titulo {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 1.5rem;
+  margin-top: -1rem;
+  margin-bottom: 2.5rem;
   font-weight: bold;
 }
 
@@ -179,14 +180,14 @@ export default {
 
 .contato-info h3 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: var(--accent);
 }
 
 .contato-info p {
   font-size: 1.1rem;
   line-height: 1.7;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #ddd;
 }
 
@@ -194,6 +195,11 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+/* criado para conseguir centralizar o contato-item no mobile, desativa no desktop */
+.mobile-br {
+  display: none;
 }
 
 .contato-item {
@@ -316,10 +322,26 @@ export default {
 
   .contato-info h3 {
     font-size: 1.8rem;
+    text-align: center;
   }
 
   .contato-info p {
     font-size: 1rem;
+    text-align: center;
+  }
+
+  .contato-detalhes {
+    align-items: center;
+  }
+
+  .contato-item {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  /* criado para conseguir centralizar o contato-item no mobile, desativa no desktop, ativa no mobile */
+  .mobile-br {
+    display: inline;
   }
 }
 </style>
