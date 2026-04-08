@@ -279,7 +279,7 @@ export default {
 }
 
 .contato-btn-enviar:hover:not(:disabled) {
-  background-color: #d32f2f;
+  background-color: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px var(--border-shadow);
 }
