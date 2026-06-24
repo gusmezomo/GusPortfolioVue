@@ -37,6 +37,12 @@ export default {
           imagem: "/img/project-hamann.webp",
           link: "https://hamannbaptista.com/",
         },
+        {
+          titulo: "Compressão de Dados e Controle de Erros",
+          descricao: "Projeto acadêmico.",
+          imagem: "/img/project-binario.webp",
+          link: "https://www.linkedin.com/posts/gusmezomo_unisinos-teoriadainformaaexaeto-python-ugcPost-7475238098470367233-tKIX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEO3ZVsB2bLdCoAKcyf5xj2IEFflQ_10Khs",
+        }
       ],
     };
   },
