@@ -35,7 +35,7 @@
         :delay="400"
         :duration="700"
       >
-        <img src="/img/hero-img.webp" alt="Foto" />
+        <img src="/img/hero-imgIA.webp" alt="Foto" />
       </div>
 
       <div

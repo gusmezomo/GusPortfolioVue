@@ -30,9 +30,9 @@
         :delay="900"
       >
         <h3>Gustavo Dalla Porta Mezomo</h3>
-        <p><i class="fas fa-laptop-code"></i> Estudante de Ciência da Computação na Unisinos, apaixonado por programação.</p>
-        <p><i class="fas fa-book"></i> Experiência em HTML, CSS, JavaScript, Vue, Python e Java. Sempre em busca de evolução.</p>
-        <p><i class="fas fa-lightbulb"></i> Interesses em desenvolvimento Front-end e Back-end.</p>
+        <p><i class="fas fa-laptop-code"></i> Estudante de Ciência da Computação na Unisinos, sempre buscando aprender e criar soluções.</p>
+        <p><i class="fas fa-book"></i> Experiência em HTML, CSS, JavaScript, VueJS, Python, Java, SQL, Git, Linux e outras tecnologias.</p>
+        <p><i class="fas fa-lightbulb"></i> Interesse em desenvolvimento Full Stack, bancos de dados e arquitetura de software.</p>
       </div>
     </div>
   </section>
