@@ -21,7 +21,7 @@
           <a href="https://www.linkedin.com/in/gusmezomo" target="_blank">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="https://www.instagram.com/zgustam" target="_blank">
+          <a href="https://www.instagram.com/gusmezomo/" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
