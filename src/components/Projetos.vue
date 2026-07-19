@@ -38,6 +38,12 @@ export default {
           link: "https://hamannbaptista.com/",
         },
         {
+          titulo: "AgroBoard - PostgreSQL",
+          descricao: "Projeto pessoal. Colocando em prática conhecimentos em Banco de Dados.",
+          imagem: "/img/agroboard.webp",
+          link: "https://agroboard.gusmezomo.com.br/",
+        },
+        {
           titulo: "Compressão de Dados e Controle de Erros",
           descricao: "Projeto acadêmico.",
           imagem: "/img/project-binario.webp",
