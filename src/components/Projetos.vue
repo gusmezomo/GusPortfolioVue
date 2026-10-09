@@ -44,6 +44,12 @@ export default {
           link: "https://agroboard.gusmezomo.com.br/",
         },
         {
+          titulo: "SinosGrade - Nodejs + SQL",
+          descricao: "Projeto pessoal. Cálculo e organização das notas da UNISINOS.",
+          imagem: "/img/sinosgrade.webp",
+          link: "https://sg.gusmezomo.com.br/",
+        },
+        {
           titulo: "Compressão de Dados e Controle de Erros",
           descricao: "Projeto acadêmico.",
           imagem: "/img/project-binario.webp",
