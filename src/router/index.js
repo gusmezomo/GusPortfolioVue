@@ -11,10 +11,14 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
+      // window.scrollTo ignora scroll-padding-top, entao le a altura da navbar da variavel CSS
+      const navH = parseFloat(
+        getComputedStyle(document.documentElement).getPropertyValue('--nav-h')
+      ) || 80
       return {
         el: to.hash,
         behavior: 'smooth',
-        top: 80 // Offset para header fixo
+        top: navH // Offset para header fixo
       }
     }
     if (savedPosition) {

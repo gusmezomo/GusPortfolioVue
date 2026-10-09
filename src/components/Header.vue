@@ -18,7 +18,10 @@ header {
   top: 0;
   width: 100%;
   background-color: var(--bg);
-  padding: 1.5rem 0; /* espaçamento interno */
+  min-height: var(--nav-h);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-bottom: 1px solid var(--accent);
   z-index: 9999; /* garante que o header fique acima de outros elementos */ 
 }
@@ -56,9 +59,6 @@ nav a:hover {
     padding: 0 1rem; /* adiciona padding nas laterais */
   }
 
-  header {
-    padding: 1rem 0; /* reduz o padding do header */
-  }
 }
 </style>
 

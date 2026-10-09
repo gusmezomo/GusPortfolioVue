@@ -1,7 +1,7 @@
 <template>
   <section
     id="sobre"
-    class="sobre"
+    class="sobre section-full"
     v-motion
     :initial="{ opacity: 0, y: 50 }"
     :visible="{ opacity: 1, y: 0 }"
@@ -41,8 +41,7 @@
 <style scoped>
 /* Sobre Mim */
 .sobre {
-  padding: 5rem 2rem 4rem;
-  scroll-margin-top: 80px;
+  padding: 2rem 2rem 4rem;
   background-color: var(--bg2);
   color: var(--text);
 }
@@ -61,6 +60,7 @@
   align-items: center; /* alinha verticalmente */
   max-width: 1200px; /* largura maxima para manter o conteudo */
   margin: 0 auto; /* centraliza o container */
+  width: 100%;
 }
 
 .sobre-img img {

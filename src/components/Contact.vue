@@ -1,7 +1,7 @@
 <template>
   <section
     id="contato"
-    class="contato"
+    class="contato section-full"
     v-motion
     :initial="{ opacity: 0, y: 50 }"
     :visible="{ opacity: 1, y: 0 }"
@@ -152,13 +152,13 @@ export default {
 <style scoped>
 /* Contato */
 .contato {
-  padding: 5rem 2rem 3rem;
-  scroll-margin-top: 80px;
+  padding: 2rem 2rem 3rem;
   background-color: var(--bg2);
   color: var(--text);
 }
 
 .contato-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }

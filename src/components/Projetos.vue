@@ -1,5 +1,5 @@
 <template>
-  <section class="projetos" id="projetos"
+  <section class="projetos section-full" id="projetos"
     v-motion
         :initial="{ opacity: 0, x: 50 }"
         :visible="{ opacity: 1, x: 0 }"
@@ -59,8 +59,7 @@ export default {
 <style scoped>
 /* --------- Layout da seção --------- */
 .projetos {
-  padding: 5rem 2rem 3rem;
-  scroll-margin-top: 80px;
+  padding: 2rem 2rem 3rem;
   background-color: var(--bg);
   color: var(--text);
   display: flex;
@@ -174,7 +173,6 @@ export default {
 @media (max-width: 480px) {
   .projetos {
     padding: 2rem 1rem;
-    min-height: auto;
   }
 
   .projetos h2 {

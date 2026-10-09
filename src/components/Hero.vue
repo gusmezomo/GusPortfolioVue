@@ -68,7 +68,8 @@
 <style scoped>
 /* tela principal do site */
 .hero {
-  min-height: 100vh; /* altura minima, por causa do cabecalho */
+  min-height: 100vh; /* fallback */
+  min-height: 100svh; /* ocupa a tela toda, fica embaixo da navbar fixa */
   display: flex;
   justify-content: center; /* centraliza horizontalmente */
   padding: 5rem 2rem 4rem;

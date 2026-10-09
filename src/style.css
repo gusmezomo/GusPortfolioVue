@@ -5,6 +5,28 @@
   --accent: #00b670;
   --text: #f1f1f1;
   --border-shadow: #037a4d;
+  --nav-h: 80px; /* altura da navbar fixa */
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-h: 64px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h); /* topo da secao nao fica atras da navbar */
+}
+
+/* secao que ocupa a tela visivel (descontando a navbar) com conteudo centralizado */
+.section-full {
+  min-height: 100vh; /* fallback */
+  min-height: calc(100svh - var(--nav-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* reset basico */
