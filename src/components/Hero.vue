@@ -139,6 +139,7 @@
 /* icones de contato */
 .contato-icons {
   display: flex;
+  font-size: 1.4rem;
   flex-direction: column; /* botoes emcima do outro*/
   gap: 1rem;
   align-items: flex-end; /* alinha os botoes a direita */
@@ -149,15 +150,15 @@
   text-decoration: none; /* remove o sublinhado */
   padding: 0.6rem 1.2rem; /* espaçamento interno */
   border-radius: 30px; /* bordas arredondadas */
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  border: 1px solid var(--text);
+  color: var(--text);
   text-align: center;
 }
 
 /* efeito quando o mouse passa por cima */
 .contato-btn:hover {
-  background: var(--accent);
-  color: white;
+  border: 1px solid var(--accent);
+  color: var(--accent);
 }
 
 @media (max-width: 900px) {
@@ -193,6 +194,7 @@
   /* centraliza os botoes de contato */
   .contato-icons {
     align-items: center;
+    font-size: 1rem;
     justify-content: center;
   }
 
